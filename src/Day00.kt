@@ -13,8 +13,10 @@ fun main() {
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("${day}_test")
-    check(part1(testInput) == part1) { "${part1(testInput)} != $part1" }
-    check(part2(testInput) == part2) { "${part2(testInput)} != $part2" }
+    val one = part1(testInput)
+    val two = part2(testInput)
+    check(one == part1) { "$one != $part1" }
+    check(two == part2) { "$two != $part2" }
 
     val input = readInput(day)
     println(part1(input))
